@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center_vertical"
-    android:padding="5dp"
-    android:singleLine="true"
-    android:textSize="20sp"
-    android:ellipsize="end"
-    android:drawableLeft="@drawable/ic_content_edit"  >   
+    android:orientation="horizontal" >
 
-</TextView>
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:singleLine="true"
+        android:layout_weight="0.44"
+        android:drawableLeft="@drawable/ic_content_edit"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:padding="5dp"
+        android:textSize="20sp" 
+        android:onClick="textedit"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="@string/delete"
+        android:onClick="removenote"
+         />
+
+</LinearLayout>
