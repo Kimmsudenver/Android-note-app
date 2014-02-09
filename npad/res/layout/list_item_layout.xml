@@ -15,6 +15,7 @@
         android:gravity="left"
         android:padding="5dp"
         android:textSize="20sp" 
+        android:clickable="true"
         android:onClick="textedit"/>
 
     <Button
@@ -22,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="right"
-        android:text="@string/delete"
+        android:background="@drawable/ic_action_content_remove"
         android:onClick="removenote"
          />
 

@@ -82,24 +82,14 @@ public class MainActivity extends ListActivity{
 	}
 ////	@Override
 	public void textedit(View view) {	
-		noteitemview notev=(noteitemview) view.getTag();
-		System.out.println(notev.toString());
-		noteitem note= notev.note;
-		System.out.println(note.toString());
+		noteitem note= (noteitem) view.getTag();
 		Intent intent =new Intent(this, NoteEditActivity.class);
 		intent.putExtra("key", note.getKey());
 		intent.putExtra("Text", note.getText());
 		startActivityForResult(intent, ACTIVITY_REQUEST);
 	}
 
-//	protected void onListItemClick(ListView l, View v, int position, long id) {
-//		noteitem note=notelist.get(position);
-//		Intent intent =new Intent(this, NoteEditActivity.class);
-//		intent.putExtra("key", note.getKey());
-//		intent.putExtra("Text", note.getText());
-//		startActivityForResult(intent,ACTIVITY_REQUEST);
-//	}
-//	
+
 	
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
